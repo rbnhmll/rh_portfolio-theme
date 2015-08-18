@@ -1,0 +1,40 @@
+header {
+	background: $black;
+}
+
+h1 {
+	color: $white;
+	position: relative;
+	padding: 20px 25px;
+	display: inline-block;
+	.mini-box {
+		position: absolute;
+		width: 10px;
+		height: 10px;
+		}
+	.mini-topleft {
+		border-top: 3px solid $white;
+		border-left: 3px solid $white;
+		top: 0;
+		left: 0;
+	}
+	.mini-topright {
+		border-top: 3px solid $white;
+		border-right: 3px solid $white;
+		top: 0;
+		right: 0;
+	}
+	.mini-bottomleft {
+		border-bottom: 3px solid $white;
+		border-left: 3px solid $white;
+		bottom: 0;
+		left: 0;
+	}
+	.mini-bottomright {
+		border-bottom: 3px solid $white;
+		border-right: 3px solid $white;
+		bottom: 0;
+		right: 0;
+	}
+}
+

@@ -1,0 +1,19 @@
+{
+  "name": "rh_portfolio",
+  "version": "1.0.0",
+  "description": "Custom WP Theme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rbnhmll/rh_portfolio-theme.git"
+  },
+  "author": "Robin Hamill",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rbnhmll/rh_portfolio-theme/issues"
+  },
+  "homepage": "https://github.com/rbnhmll/rh_portfolio-theme#readme"
+}

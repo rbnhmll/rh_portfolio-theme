@@ -1,0 +1,23 @@
+// Imports
+@import 'setup';
+@import 'variables';
+@import 'header';
+@import 'about';
+@import 'works';
+@import 'blog';
+@import 'contact';
+@import 'footer';
+
+
+
+
+
+// GENERAL STYLES
+
+.outer-wrapper {
+	max-width: 1170px;
+}
+
+.inner-wrapper {
+	max-width: 970px;
+}
