@@ -25,25 +25,25 @@
 	<!-- <a class="skip-link screen-reader-text" href="#content"><?php //esc_html_e( 'Skip to content', 'rh_portfolio' ); ?></a> -->
 
 	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<?php if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-					<div class="mini-box mini-topleft"></div>
-					<div class="mini-box mini-topright"></div>
-					<div class="mini-box mini-bottomleft"></div>
-					<div class="mini-box mini-bottomright"></div>
-				</h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php endif; ?>
-			<p class="site-description"><?php bloginfo( 'description' ); ?></p>
-		</div><!-- .site-branding -->
+		<div class="outer-wrapper">
+			<div class="nav-logo-container">
+				<div class="site-branding">
+						<h1 class="site-title">
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+							<div class="mini-box mini-topleft"></div>
+							<div class="mini-box mini-topright"></div>
+							<div class="mini-box mini-bottomleft"></div>
+							<div class="mini-box mini-bottomright"></div>
+						</h1>
+						<p class="site-description"><?php bloginfo( 'description' ); ?></p>
+				</div><!-- .site-branding -->
+			
+				<nav id="site-navigation" class="main-navigation" role="navigation">
+					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+				</nav><!-- #site-navigation -->
+			</div> <!-- /.nav-logo-container -->
+		</div> <!-- /.outerwrapper -->
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'rh_portfolio' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
