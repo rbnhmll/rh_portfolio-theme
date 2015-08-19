@@ -1,3 +1,12 @@
+.about-container {
+	padding: 100px 0;
+	background: $white;
+	transform: skewY(-2deg);
+	.inner-wrapper {
+			transform: skewY(2deg);
+	}
+}
+
 .headshot {
 	img {
 		width: 150px;
