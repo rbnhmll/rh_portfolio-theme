@@ -1,0 +1,28 @@
+.site-footer {
+	padding: 100px 0;
+	background: $white;
+	transform: skewY(-2deg);
+	.inner-wrapper {
+			transform: skewY(2deg);
+	}
+}
+
+.social-buttons {
+	margin: 0 auto;
+	text-align: center;
+	.social-button {
+		padding: 10px;
+		line-height: 1;
+		color: $darkgrey;
+		border: 2px solid $lightgrey;
+		border-radius: 50%;
+		.fa {
+			font-size: 1rem;
+			line-height: 1;
+		}
+	}
+}
+
+.site-info {
+	text-align: center;
+}

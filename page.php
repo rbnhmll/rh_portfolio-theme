@@ -14,24 +14,29 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	<section class="home-container">
+		
+	</section> <!-- /.home-container -->
 
-			<?php while ( have_posts() ) : the_post(); ?>
+	<section class="about-container">
+		<div class="inner-wrapper">
+			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+				<h3><?php the_title(); ?></h3>
+				<div class="headshot">
+					<img src="<?php the_field('photo'); ?>" alt="">
+				</div> <!-- /.headshot -->
+				<?php the_content(); ?>
+			<?php endwhile; ?>
+		</div> <!-- /.inner-wrapper -->
+	</section> <!-- /.about-container -->
 
-				<?php get_template_part( 'template-parts/content', 'page' ); ?>
+	<section class="portfolio-container">
+		
+	</section> <!-- /.portfolio-container -->
 
-				<?php
-					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;
-				?>
-
-			<?php endwhile; // End of the loop. ?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
+	<section class="blog-container">
+		
+	</section> <!-- /.blog-container -->
 
 <?php //get_sidebar(); ?>
 <?php get_footer(); ?>

@@ -1,0 +1,21 @@
+			<?php $args = array(
+				'sort_order' => 'asc',
+				'sort_column' => 'menu_order',
+				'post_type' => 'page',
+				'post_status' => 'publish'
+			); 
+			?>
+
+			<?php $newAwesomeQuery = new WP_Query( $args ); ?>
+
+			<?php if ( $newAwesomeQuery->have_posts() ) : ?>
+
+			<?php while ( $newAwesomeQuery->have_posts() ) : $newAwesomeQuery->the_post(); ?>
+					<?php the_title(); ?>
+			<?php endwhile; ?>
+
+			<?php wp_reset_postdata(); ?>
+
+			<?php else:  ?>
+				[stuff that happens if there aren't any posts]
+			<?php endif; ?>

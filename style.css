@@ -144,9 +144,11 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   align-items: center; }
 
 h1 {
+  font-size: 1rem;
   color: #fefefe;
   position: relative;
-  margin: 0; }
+  margin: 0;
+  padding: 20px 25px; }
   h1 a {
     padding: 20px 25px;
     color: #fefefe;
@@ -186,6 +188,60 @@ h1 {
     .menu .menu-item a {
       text-decoration: none;
       color: #fefefe; }
+
+.home-main {
+  background: #282828; }
+
+.tagline h2 {
+  color: #fefefe; }
+
+.wide-line {
+  display: inline-block;
+  width: 300px;
+  height: 3px;
+  background: #fefefe; }
+
+.headshot img {
+  width: 150px; }
+
+.site-footer {
+  padding: 100px 0;
+  background: #fefefe;
+  transform: skewY(-2deg); }
+  .site-footer .inner-wrapper {
+    transform: skewY(2deg); }
+
+.social-buttons {
+  margin: 0 auto;
+  text-align: center; }
+  .social-buttons .social-button {
+    padding: 10px;
+    line-height: 1;
+    color: #BABBBC;
+    border: 2px solid #D9DADB;
+    border-radius: 50%; }
+    .social-buttons .social-button .fa {
+      font-size: 1rem;
+      line-height: 1; }
+
+.site-info {
+  text-align: center; }
+
+html {
+  font-size: 16px;
+  font-family: "Raleway", sans-serif; }
+
+body {
+  background: #282828; }
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Montserrat", sans-serif; }
+
+p {
+  color: #BABBBC; }
 
 .outer-wrapper {
   max-width: 1170px;
