@@ -1,10 +1,10 @@
 .site-footer {
 	padding: 100px 0 50px 0;
 	background: $white;
-	transform: skewY(-2deg);
+	transform: skewY(-3deg);
 	margin-bottom: -20px;
 	.inner-wrapper {
-			transform: skewY(2deg);
+			transform: skewY(3deg);
 	}
 }
 
@@ -18,8 +18,10 @@
 		border: 2px solid $lightgrey;
 		border-radius: 50%;
 		.fa {
+			display: inline-block;
 			font-size: 1rem;
-			line-height: 1;
+			line-height: 1rem;
+			width: 1rem;
 		}
 	}
 }

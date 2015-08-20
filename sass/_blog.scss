@@ -1,8 +1,14 @@
 .blog-container {
 	padding: 100px 0;
 	background: $white;
-	transform: skewY(-2deg);
+	transform: skewY(-3deg);
 	.inner-wrapper {
-			transform: skewY(2deg);
+			transform: skewY(3deg);
+	}
+}
+
+.blog-posts {
+	display: flex;
+	.blog-post {
 	}
 }

@@ -1,3 +1,85 @@
 .contact-container {
+	position: relative;
 	padding: 100px 0;
+	h3 {
+		color: $white;
+	}
+	.outer-wrapper {
+		display: flex;
+		margin-top: 50px;
+	}
+}
+
+.information {
+	color: $white;
+	width: 35%;
+	.fa {
+		width: 35px;
+	}
+	.fa-mobile {
+		font-size: 1.8rem;
+	}
+}
+
+.contact-form {
+	.name-input,
+	.email-input,
+	textarea {
+		color: $white;
+		padding: 15px;
+		background: $black;
+		border: 3px solid $white;
+	}
+}
+
+.contact-form {
+	width: 65%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	.name-input,
+	.email-input {
+		width: 49%;
+	}
+	textarea {
+		width: 100%;
+		margin: 25px 0;
+	}
+}
+
+.submit-button {
+	background: $sand;
+	padding: 15px 30px;
+	border: 3px solid $sand;
+	color: $white;
+	transition: all 0.5s ease;
+	&:hover {
+		color: $sand;
+		background: transparent
+	}
+}
+
+.back-to-top {
+	background: $black;
+	position: absolute;
+	bottom: -24px;
+	left: calc(50% - 23px);
+	text-align: center;
+	border-radius: 50%;
+	padding: 7px;
+	z-index: 10;
+	transition: all 0.5s ease;
+	color: $white;
+	// border: 3px solid transparent;
+	&:hover {
+		background: $white;
+		// border: 3px solid $black;
+		color: $black;
+	}
+	.fa-angle-up {
+		font-size: 2.5rem;
+		display: inline-block;
+		width: 2rem;
+		line-height: 2rem;
+	}
 }
