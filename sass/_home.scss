@@ -1,18 +1,29 @@
 .home-container {
-	padding: 100px 0;
+	padding: 150px 0;
 }
 
 .tagline {
+	text-align: center;
+	margin: 0 auto;
 	h2 {
+		letter-spacing: 2px;
+	}
+	h2,
+	h3 {
 		color: $white;
 		text-transform: uppercase;
-
+		margin: 10px 0;
+	}
+	.site-description {
+		font-family: $fontMain;
+		font-weight: 100;
+		letter-spacing: 3px;
 	}
 }
 
 .wide-line {
 	display: inline-block;
-	width: 300px;
+	width: 350px;
 	height: 3px;
 	background: $white;
 }

@@ -24,7 +24,8 @@ get_header(); ?>
 		<div class="inner-wrapper">
 			<div class="tagline">
 				<div class="wide-line"></div>
-				<h2><?php the_field('tagline'); ?></h2>
+				<h2 href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></h2>
+				<h3 class="site-description"><?php bloginfo( 'description' ); ?></h3>
 				<div class="wide-line"></div>
 			</div> <!-- /.tagline -->
 		</div> <!-- /.inner-wrapper -->
@@ -36,11 +37,13 @@ get_header(); ?>
 		<div class="inner-wrapper">
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 				<h3><?php the_field('about_section_title'); ?></h3>
-				<div class="headshot">
-					<img src="<?php the_field('photo'); ?>" alt="">
-				</div> <!-- /.headshot -->
-				<?php the_field('about_description'); ?>
-				<a href="">View CV</a>
+				<div class="about-content">
+					<div class="headshot">
+						<img src="<?php the_field('photo'); ?>" alt="">
+					</div> <!-- /.headshot -->
+					<?php the_field('about_description'); ?>
+				</div> <!-- /.about-content -->
+				<a href="" class="cv button">View CV</a>
 			<?php endwhile; ?>
 		</div> <!-- /.inner-wrapper -->
 	</section> <!-- /.about-container -->
@@ -51,6 +54,39 @@ get_header(); ?>
 		<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 				<div class="inner-wrapper">
 					<h3><?php the_field('portfolio_section_title'); ?></h3>
+					<div class="work-items">
+						<?php $workArgs = array(
+							'sort_order' => 'asc',
+							'sort_column' => 'menu_order',
+							'post_type' => 'portfolio',
+							'post_status' => 'publish',
+							'posts_per_page' => 3
+						); 
+						?>
+
+						<?php $workQuery = new WP_Query( $workArgs ); ?>
+
+						<?php if ( $workQuery->have_posts() ) : ?>
+
+						<?php while ( $workQuery->have_posts() ) : $workQuery->the_post(); ?>
+								<div class="portfolio-item">
+									<div class="portfolio-image">
+										<img src="<?php the_field('portfolio_image') ?>" alt="Portfolio Sample Image">
+									</div> <!-- /.portfolio-image -->
+									<div class="portfolio-text">
+										<?php the_title(); ?>
+										<?php the_excerpt(); ?>
+										<a href="" class="viewLive button">View Live</a>
+									</div> <!-- /.portfolio-text -->
+								</div> <!-- /.portfolio-item -->
+						<?php endwhile; ?>
+
+						<?php wp_reset_postdata(); ?>
+
+						<?php else:  ?>
+							<p>There are no posts to display.</p>
+						<?php endif; ?>
+					</div> <!-- /.work-items -->
 				</div> <!-- /.inner-wrapper -->
 				<?php the_content(); ?>
 			<?php endwhile; ?>
@@ -80,7 +116,7 @@ get_header(); ?>
 					<?php while ( $blogQuery->have_posts() ) : $blogQuery->the_post(); ?>
 							<div class="blog-post">
 								<?php the_title(); ?>
-								<?php the_content(); ?>
+								<?php the_excerpt(); ?>
 							</div>
 					<?php endwhile; ?>
 

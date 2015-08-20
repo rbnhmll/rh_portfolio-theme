@@ -12,7 +12,7 @@
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700|Montserrat:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,200,100,500,600,700|Montserrat:400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,7 +37,6 @@
 							<div class="mini-box mini-bottomleft"></div>
 							<div class="mini-box mini-bottomright"></div>
 						</h1>
-						<p class="site-description"><?php bloginfo( 'description' ); ?></p>
 				</div><!-- .site-branding -->
 			
 				<nav id="site-navigation" class="main-navigation" role="navigation">

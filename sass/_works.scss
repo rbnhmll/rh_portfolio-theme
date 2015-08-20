@@ -1,6 +1,21 @@
 .portfolio-container {
+	color: $white;
 	padding: 100px 0;
 	h3 {
-		color: $white;
+	}
+}
+
+.portfolio-item {
+	display: flex;
+	justify-content: space-between;
+	margin: 50px 0;
+	.portfolio-image {
+		width: 35%;
+		img {
+			max-width: 100%;
+		}
+	}
+	.portfolio-text {
+		width: 60%;
 	}
 }

@@ -4,11 +4,27 @@
 	transform: skewY(-3deg);
 	.inner-wrapper {
 			transform: skewY(3deg);
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
 	}
 }
 
+.about-content {
+	display: flex;
+	align-items: center;
+	margin: 35px 0;
+}
+
 .headshot {
+	margin-right: 5%;
 	img {
-		width: 150px;
+		width: 200px;
+		border-radius: 50%;
 	}
+}
+
+.cv {
+	display: inline-block;
+	margin: 0 auto;
 }

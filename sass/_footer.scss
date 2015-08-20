@@ -1,8 +1,9 @@
 .site-footer {
-	padding: 100px 0 50px 0;
+	padding: 100px 0 0 0;
 	background: $white;
 	transform: skewY(-3deg);
 	margin-bottom: -20px;
+	box-shadow: 0 100px 0 $white;
 	.inner-wrapper {
 			transform: skewY(3deg);
 	}

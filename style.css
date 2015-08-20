@@ -136,7 +136,11 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 .nav-logo-container {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  margin: 20px 0; }
+  .nav-logo-container .main-navigation {
+    display: flex;
+    align-items: center; }
 
 .site-branding {
   display: inline-flex;
@@ -191,15 +195,26 @@ h1 {
       color: #fefefe; }
 
 .home-container {
-  padding: 100px 0; }
+  padding: 150px 0; }
 
-.tagline h2 {
-  color: #fefefe;
-  text-transform: uppercase; }
+.tagline {
+  text-align: center;
+  margin: 0 auto; }
+  .tagline h2 {
+    letter-spacing: 2px; }
+  .tagline h2,
+  .tagline h3 {
+    color: #fefefe;
+    text-transform: uppercase;
+    margin: 10px 0; }
+  .tagline .site-description {
+    font-family: "Raleway", sans-serif;
+    font-weight: 100;
+    letter-spacing: 3px; }
 
 .wide-line {
   display: inline-block;
-  width: 300px;
+  width: 350px;
   height: 3px;
   background: #fefefe; }
 
@@ -208,15 +223,40 @@ h1 {
   background: #fefefe;
   transform: skewY(-3deg); }
   .about-container .inner-wrapper {
-    transform: skewY(3deg); }
+    transform: skewY(3deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
 
-.headshot img {
-  width: 150px; }
+.about-content {
+  display: flex;
+  align-items: center;
+  margin: 35px 0; }
+
+.headshot {
+  margin-right: 5%; }
+  .headshot img {
+    width: 200px;
+    border-radius: 50%; }
+
+.cv {
+  display: inline-block;
+  margin: 0 auto; }
 
 .portfolio-container {
+  color: #fefefe;
   padding: 100px 0; }
-  .portfolio-container h3 {
-    color: #fefefe; }
+
+.portfolio-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0; }
+  .portfolio-item .portfolio-image {
+    width: 35%; }
+    .portfolio-item .portfolio-image img {
+      max-width: 100%; }
+  .portfolio-item .portfolio-text {
+    width: 60%; }
 
 .blog-container {
   padding: 100px 0;
@@ -296,10 +336,11 @@ h1 {
     line-height: 2rem; }
 
 .site-footer {
-  padding: 100px 0 50px 0;
+  padding: 100px 0 0 0;
   background: #fefefe;
   transform: skewY(-3deg);
-  margin-bottom: -20px; }
+  margin-bottom: -20px;
+  box-shadow: 0 100px 0 #fefefe; }
   .site-footer .inner-wrapper {
     transform: skewY(3deg); }
 
@@ -342,6 +383,9 @@ h3 {
 p {
   color: #BABBBC; }
 
+a {
+  text-decoration: none; }
+
 .outer-wrapper {
   max-width: 1170px;
   margin: 0 auto; }
@@ -349,3 +393,12 @@ p {
 .inner-wrapper {
   max-width: 970px;
   margin: 0 auto; }
+
+.button {
+  padding: 10px 20px;
+  border: 3px solid #282828;
+  transition: all 0.5s ease;
+  color: #282828; }
+  .button:hover {
+    background: #282828;
+    color: #fefefe; }
