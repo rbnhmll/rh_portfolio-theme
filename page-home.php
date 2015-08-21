@@ -24,7 +24,7 @@ get_header(); ?>
 		<div class="inner-wrapper">
 			<div class="tagline">
 				<div class="wide-line"></div>
-				<h2 href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></h2>
+				<h2 class="dev-name"><?php bloginfo( 'name' ); ?></h2>
 				<h3 class="site-description"><?php bloginfo( 'description' ); ?></h3>
 				<div class="wide-line"></div>
 			</div> <!-- /.tagline -->
@@ -37,11 +37,14 @@ get_header(); ?>
 		<div class="inner-wrapper">
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 				<h3><?php the_field('about_section_title'); ?></h3>
+				<div class="little-line dark"></div>
 				<div class="about-content">
 					<div class="headshot">
 						<img src="<?php the_field('photo'); ?>" alt="">
 					</div> <!-- /.headshot -->
-					<?php the_field('about_description'); ?>
+					<div class="about-text">
+						<?php the_field('about_description'); ?>
+					</div> <!-- /.about-text -->
 				</div> <!-- /.about-content -->
 				<a href="" class="cv button">View CV</a>
 			<?php endwhile; ?>
@@ -54,6 +57,7 @@ get_header(); ?>
 		<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 				<div class="inner-wrapper">
 					<h3><?php the_field('portfolio_section_title'); ?></h3>
+					<div class="little-line light"></div>
 					<div class="work-items">
 						<?php $workArgs = array(
 							'sort_order' => 'asc',
@@ -76,7 +80,7 @@ get_header(); ?>
 									<div class="portfolio-text">
 										<?php the_title(); ?>
 										<?php the_excerpt(); ?>
-										<a href="" class="viewLive button">View Live</a>
+										<a href="<?php the_field('live_link'); ?>" class="viewLive button" target="_blank">View Live</a>
 									</div> <!-- /.portfolio-text -->
 								</div> <!-- /.portfolio-item -->
 						<?php endwhile; ?>
@@ -98,6 +102,7 @@ get_header(); ?>
 		<div class="inner-wrapper">
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 				<h3><?php the_field('blog_section_title'); ?></h3>
+				<div class="little-line dark"></div>
 				<p><?php the_field('blog_description'); ?></p>
 				<div class="blog-posts">
 					<?php $args = array(
@@ -136,6 +141,7 @@ get_header(); ?>
 		<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 			<div class="inner-wrapper">
 				<h3><?php the_field('contact_section_title'); ?></h3>
+				<div class="little-line light"></div>
 				<p><?php the_field('contact_description'); ?></p>
 			</div> <!-- /.inner-wrapper -->
 			<div class="outer-wrapper">
@@ -145,9 +151,9 @@ get_header(); ?>
 					<p><i class="fa fa-envelope-o"></i><?php the_field('email'); ?></p>
 				</div> <!-- /.information -->
 				
-				<form action="" class="contact-form">
-					<input type="text" class="name-input" placeholder="Name">
-					<input type="email" class="email-input" placeholder="E-Mail">
+				<form action="http://formspree.io/hi@robinhamill.ca" method="POST" class="contact-form">
+					<input type="text" class="name-input" name="name" placeholder="Name">
+					<input type="email" class="email-input" name="_replyto" placeholder="E-Mail">
 					<textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
 					<input type="submit" value="Send Message" class="submit-button">
 				</form>

@@ -6,6 +6,7 @@
 	}
 	.outer-wrapper {
 		display: flex;
+		justify-content: space-between;
 		margin-top: 50px;
 	}
 }
@@ -33,7 +34,7 @@
 }
 
 .contact-form {
-	width: 65%;
+	width: calc(50% + 87px);
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
@@ -42,7 +43,8 @@
 		width: 49%;
 	}
 	textarea {
-		width: 100%;
+		max-width: 100%;
+		min-width: 100%;
 		margin: 25px 0;
 	}
 }

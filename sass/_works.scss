@@ -10,12 +10,27 @@
 	justify-content: space-between;
 	margin: 50px 0;
 	.portfolio-image {
-		width: 35%;
+		width: calc(45% - 59px);
 		img {
 			max-width: 100%;
+			display: block;
 		}
 	}
 	.portfolio-text {
-		width: 60%;
+		position: relative;
+		width: calc(50% + 59px);
 	}
+}
+
+.button.viewLive {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	color: $white;
+	border: 3px solid $white;
+	&:hover {
+		background: $white;
+		color: $black;
+	}
+
 }

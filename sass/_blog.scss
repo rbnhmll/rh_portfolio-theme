@@ -1,3 +1,5 @@
+// BLOG SAMPLES / FRONT PAGE
+
 .blog-container {
 	padding: 100px 0;
 	background: $white;
@@ -9,6 +11,14 @@
 
 .blog-posts {
 	display: flex;
+	justify-content: space-between;
 	.blog-post {
+		width: 30%;
 	}
 }
+
+
+
+
+// BLOG PAGE FULL
+

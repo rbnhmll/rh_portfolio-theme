@@ -132,7 +132,10 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   box-sizing: border-box; }
 
 .site-header {
-  background: #282828; }
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  background: rgba(40, 40, 40, 0.8); }
 
 .nav-logo-container {
   display: flex;
@@ -149,6 +152,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 h1 {
   font-size: 1rem;
+  font-weight: 300;
   color: #fefefe;
   position: relative;
   margin: 0; }
@@ -195,13 +199,14 @@ h1 {
       color: #fefefe; }
 
 .home-container {
-  padding: 150px 0; }
+  padding: 200px 0 200px 0; }
 
 .tagline {
   text-align: center;
   margin: 0 auto; }
   .tagline h2 {
-    letter-spacing: 2px; }
+    letter-spacing: 2px;
+    font-weight: 300; }
   .tagline h2,
   .tagline h3 {
     color: #fefefe;
@@ -252,11 +257,23 @@ h1 {
   justify-content: space-between;
   margin: 50px 0; }
   .portfolio-item .portfolio-image {
-    width: 35%; }
+    width: calc(45% - 59px); }
     .portfolio-item .portfolio-image img {
-      max-width: 100%; }
+      max-width: 100%;
+      display: block; }
   .portfolio-item .portfolio-text {
-    width: 60%; }
+    position: relative;
+    width: calc(50% + 59px); }
+
+.button.viewLive {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #fefefe;
+  border: 3px solid #fefefe; }
+  .button.viewLive:hover {
+    background: #fefefe;
+    color: #282828; }
 
 .blog-container {
   padding: 100px 0;
@@ -266,7 +283,10 @@ h1 {
     transform: skewY(3deg); }
 
 .blog-posts {
-  display: flex; }
+  display: flex;
+  justify-content: space-between; }
+  .blog-posts .blog-post {
+    width: 30%; }
 
 .contact-container {
   position: relative;
@@ -275,6 +295,7 @@ h1 {
     color: #fefefe; }
   .contact-container .outer-wrapper {
     display: flex;
+    justify-content: space-between;
     margin-top: 50px; }
 
 .information {
@@ -294,7 +315,7 @@ h1 {
   border: 3px solid #fefefe; }
 
 .contact-form {
-  width: 65%;
+  width: calc(50% + 87px);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between; }
@@ -302,7 +323,8 @@ h1 {
   .contact-form .email-input {
     width: 49%; }
   .contact-form textarea {
-    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
     margin: 25px 0; }
 
 .submit-button {
@@ -336,7 +358,7 @@ h1 {
     line-height: 2rem; }
 
 .site-footer {
-  padding: 100px 0 0 0;
+  padding: 75px 0 0 0;
   background: #fefefe;
   transform: skewY(-3deg);
   margin-bottom: -20px;
@@ -345,7 +367,7 @@ h1 {
     transform: skewY(3deg); }
 
 .social-buttons {
-  margin: 0 auto;
+  margin: 0 auto 35px auto;
   text-align: center; }
   .social-buttons .social-button {
     padding: 10px;
@@ -365,7 +387,7 @@ h1 {
 html {
   font-size: 16px;
   font-family: "Raleway", sans-serif;
-  line-height: 1.2; }
+  line-height: 1.4; }
 
 body {
   background: #282828; }
@@ -388,11 +410,13 @@ a {
 
 .outer-wrapper {
   max-width: 1170px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 0 25px; }
 
 .inner-wrapper {
   max-width: 970px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 0 25px; }
 
 .button {
   padding: 10px 20px;
@@ -402,3 +426,14 @@ a {
   .button:hover {
     background: #282828;
     color: #fefefe; }
+
+.little-line {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 0 auto;
+  text-align: center; }
+  .little-line.light {
+    background: #fefefe; }
+  .little-line.dark {
+    background: #BABBBC; }

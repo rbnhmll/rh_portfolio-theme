@@ -18,7 +18,7 @@
 html {
 	font-size: 16px;
 	font-family: $fontMain;
-	line-height: 1.2;
+	line-height: 1.4;
 }
 
 body {
@@ -48,11 +48,13 @@ a {
 .outer-wrapper {
 	max-width: 1170px;
 	margin: 0 auto;
+	padding: 0 25px;
 }
 
 .inner-wrapper {
 	max-width: 970px;
 	margin: 0 auto;
+	padding: 0 25px
 }
 
 .button {
@@ -63,5 +65,19 @@ a {
 	&:hover {
 		background: $black;
 		color: $white;
+	}
+}
+
+.little-line {
+	display: block;
+	width: 25px;
+	height: 3px;
+	margin: 0 auto;
+	text-align: center;
+	&.light {
+		background: $white;
+	}
+	&.dark {
+		background: $darkgrey;
 	}
 }
