@@ -78,7 +78,21 @@ get_header(); ?>
 										<img src="<?php the_field('portfolio_image') ?>" alt="Portfolio Sample Image">
 									</div> <!-- /.portfolio-image -->
 									<div class="portfolio-text">
-										<?php the_title(); ?>
+										<h4><?php the_title(); ?></h4>
+										
+										<?php //$postID = get_the_ID(); ?>
+										<!--<div class="tech-tags">--><?php //the_terms( $postID,'technology', '', ' // ', '' ); ?>
+										<!-- </div> --> <!-- /.tech-tags -->
+
+
+										<?php $taxonomyItems = get_the_terms($post->ID, 'technology', '', ',', '');
+										  //performs one time for each taxonomy item
+										  foreach ($taxonomyItems as $taxonomyItem) {
+											// prints the taxonomy name wrapped in custom characters
+											echo '<div class="tech">'.$taxonomyItem->name.'</div>';
+										   };
+										  ?>
+
 										<?php the_excerpt(); ?>
 										<a href="<?php the_field('live_link'); ?>" class="viewLive button" target="_blank">View Live</a>
 									</div> <!-- /.portfolio-text -->
@@ -100,38 +114,20 @@ get_header(); ?>
 <!-- BLOG SECTION -->
 	<section class="blog-container" id="blog">
 		<div class="inner-wrapper">
-			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-				<h3><?php the_field('blog_section_title'); ?></h3>
-				<div class="little-line dark"></div>
-				<p><?php the_field('blog_description'); ?></p>
-				<div class="blog-posts">
-					<?php $args = array(
-						'sort_order' => 'asc',
-						'sort_column' => 'menu_order',
-						'post_type' => 'post',
-						'post_status' => 'publish',
-						'posts_per_page' => 3
-					); 
-					?>
-
-					<?php $blogQuery = new WP_Query( $args ); ?>
-
-					<?php if ( $blogQuery->have_posts() ) : ?>
-
-					<?php while ( $blogQuery->have_posts() ) : $blogQuery->the_post(); ?>
-							<div class="blog-post">
-								<?php the_title(); ?>
-								<?php the_excerpt(); ?>
-							</div>
-					<?php endwhile; ?>
-
-					<?php wp_reset_postdata(); ?>
-
-					<?php else:  ?>
-						
-					<?php endif; ?>
-				</div> <!-- /.blog-posts -->
-			<?php endwhile; ?>
+			<h3>Technologies</h3>
+			<ul>
+				<li>HTML5</li>
+				<li>CSS3</li>
+				<li>Javascript</li>
+				<li>jQuery</li>
+				<li>Wordpress</li>
+				<li>PHP</li>
+				<li>Git</li>
+				<li>Gulp</li>
+				<li>Sass</li>
+				<li>CommandLine</li>
+				<li>Mapbox</li>
+			</ul>
 		</div> <!-- /.inner-wrapper -->
 	</section> <!-- /.blog-container -->
 
@@ -143,21 +139,21 @@ get_header(); ?>
 				<h3><?php the_field('contact_section_title'); ?></h3>
 				<div class="little-line light"></div>
 				<p><?php the_field('contact_description'); ?></p>
+				<div class="info-form-container">
+					<div class="information">
+						<h3>Let's work together</h3>
+						<a href="mailto:hi@robinhamill.ca" class="button email-btn">hi@robinhamill.ca</a>
+					</div> <!-- /.information -->
+					
+					<form action="http://formspree.io/hi@robinhamill.ca" method="POST" class="contact-form">
+						<input type="text" class="name-input" name="name" placeholder="Name">
+						<input type="email" class="email-input" name="_replyto" placeholder="E-Mail">
+						<textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+						<input type="text" name="_gotcha" style="display:none" />
+						<input type="submit" value="Send Message" class="submit-button">
+					</form>
+				</div> <!-- /.info-form-container -->
 			</div> <!-- /.inner-wrapper -->
-			<div class="outer-wrapper">
-				<div class="information">
-					<h4>Information</h4>
-					<p><i class="fa fa-mobile"></i><?php the_field('phone'); ?></p>
-					<p><i class="fa fa-envelope-o"></i><?php the_field('email'); ?></p>
-				</div> <!-- /.information -->
-				
-				<form action="http://formspree.io/hi@robinhamill.ca" method="POST" class="contact-form">
-					<input type="text" class="name-input" name="name" placeholder="Name">
-					<input type="email" class="email-input" name="_replyto" placeholder="E-Mail">
-					<textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
-					<input type="submit" value="Send Message" class="submit-button">
-				</form>
-			</div> <!-- /.outer-wrapper -->
 			<?php endwhile; ?>
 		<a href="#top" class="back-to-top"><i class="fa fa-angle-up"></i></a>
 	</section> <!-- /.contact-container -->

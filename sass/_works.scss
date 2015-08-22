@@ -19,7 +19,18 @@
 	.portfolio-text {
 		position: relative;
 		width: calc(50% + 59px);
+		h4 {
+			margin-top: 0;
+		}
 	}
+}
+
+.tech {
+	display: inline-block;
+	padding: 2px 5px;
+	margin-right: 15px;
+	border-top: 1px solid $white;
+	border-bottom: 1px solid $white;
 }
 
 .button.viewLive {

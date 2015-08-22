@@ -133,6 +133,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 .site-header {
   position: fixed;
+  top: 0;
   z-index: 10;
   width: 100%;
   background: rgba(40, 40, 40, 0.8); }
@@ -142,6 +143,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   justify-content: space-between;
   margin: 20px 0; }
   .nav-logo-container .main-navigation {
+    text-transform: uppercase;
     display: flex;
     align-items: center; }
 
@@ -192,11 +194,25 @@ h1 {
   display: flex;
   margin: 0;
   list-style: none; }
-  .menu .menu-item {
-    padding: 10px; }
-    .menu .menu-item a {
-      text-decoration: none;
-      color: #fefefe; }
+  .menu .menu-item a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 5px;
+    margin: 0 5px;
+    text-decoration: none;
+    color: #fefefe;
+    overflow: hidden; }
+    .menu .menu-item a:after {
+      position: absolute;
+      bottom: 0;
+      left: -100%;
+      content: "";
+      width: 100%;
+      height: 3px;
+      background: #fefefe;
+      transition: left 0.5s ease; }
+    .menu .menu-item a:hover:after {
+      left: 0; }
 
 .home-container {
   padding: 200px 0 200px 0; }
@@ -264,6 +280,15 @@ h1 {
   .portfolio-item .portfolio-text {
     position: relative;
     width: calc(50% + 59px); }
+    .portfolio-item .portfolio-text h4 {
+      margin-top: 0; }
+
+.tech {
+  display: inline-block;
+  padding: 2px 5px;
+  margin-right: 15px;
+  border-top: 1px solid #fefefe;
+  border-bottom: 1px solid #fefefe; }
 
 .button.viewLive {
   position: absolute;
@@ -286,25 +311,85 @@ h1 {
   display: flex;
   justify-content: space-between; }
   .blog-posts .blog-post {
-    width: 30%; }
+    position: relative;
+    border: 3px solid #797b7d;
+    width: 32%;
+    padding: 15px;
+    margin: 50px 0; }
+    .blog-posts .blog-post p {
+      margin-bottom: 75px; }
+    .blog-posts .blog-post .button {
+      position: absolute;
+      bottom: 15px;
+      left: calc(50% - 63.6875px);
+      display: inline-block;
+      justify-content: center;
+      margin: 0 auto;
+      text-align: center; }
+
+.blog-main {
+  background: #fefefe; }
+
+.entry-header {
+  margin-top: 150px; }
+
+.blog-content {
+  background: #fefefe; }
+
+.comments {
+  background: #282828; }
+
+.comment-form {
+  margin-bottom: 100px; }
+  .comment-form input,
+  .comment-form textarea {
+    color: #282828;
+    padding: 5px;
+    background: #fefefe;
+    border: 3px solid #282828; }
+
+.comment-form {
+  width: 100%;
+  margin: 0 auto 100px auto; }
+  .comment-form input,
+  .comment-form input {
+    width: 100%; }
+  .comment-form textarea {
+    max-width: 100%;
+    min-width: 100%;
+    margin: 25px 0; }
+
+#submit {
+  background: #B8AC8D;
+  padding: 15px 30px;
+  border: 3px solid #B8AC8D;
+  color: #fefefe;
+  transition: all 0.5s ease; }
+  #submit:hover {
+    color: #B8AC8D;
+    background: transparent; }
 
 .contact-container {
   position: relative;
   padding: 100px 0; }
   .contact-container h3 {
     color: #fefefe; }
-  .contact-container .outer-wrapper {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 50px; }
+
+.info-form-container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between; }
 
 .information {
-  color: #fefefe;
   width: 35%; }
-  .information .fa {
-    width: 35px; }
-  .information .fa-mobile {
-    font-size: 1.8rem; }
+  .information h3 {
+    text-align: left;
+    margin: 0; }
+  .information .email-btn {
+    text-transform: lowercase;
+    padding: 15px;
+    color: #fefefe;
+    border: 3px solid #fefefe; }
 
 .contact-form .name-input,
 .contact-form .email-input,
@@ -328,25 +413,26 @@ h1 {
     margin: 25px 0; }
 
 .submit-button {
-  background: #B8AC8D;
+  text-transform: uppercase;
+  background: #fefefe;
   padding: 15px 30px;
-  border: 3px solid #B8AC8D;
-  color: #fefefe;
+  border: 3px solid #fefefe;
+  color: #282828;
   transition: all 0.5s ease; }
   .submit-button:hover {
-    color: #B8AC8D;
+    color: #fefefe;
     background: transparent; }
 
 .back-to-top {
-  background: #282828;
   position: absolute;
-  bottom: -24px;
+  bottom: -22px;
   left: calc(50% - 23px);
   text-align: center;
   border-radius: 50%;
   padding: 7px;
   z-index: 10;
   transition: all 0.5s ease;
+  background: #282828;
   color: #fefefe; }
   .back-to-top:hover {
     background: #fefefe;
@@ -355,7 +441,7 @@ h1 {
     font-size: 2.5rem;
     display: inline-block;
     width: 2rem;
-    line-height: 2rem; }
+    line-height: 1.6rem; }
 
 .site-footer {
   padding: 75px 0 0 0;
@@ -370,15 +456,21 @@ h1 {
   margin: 0 auto 35px auto;
   text-align: center; }
   .social-buttons .social-button {
+    margin: 5px;
     padding: 10px;
     line-height: 1;
-    color: #BABBBC;
+    color: #797b7d;
     border: 2px solid #D9DADB;
-    border-radius: 50%; }
+    border-radius: 50%;
+    transition: all 0.5s ease; }
+    .social-buttons .social-button:hover {
+      color: #fefefe;
+      border: 2px solid #B8AC8D;
+      background: #B8AC8D; }
     .social-buttons .social-button .fa {
       display: inline-block;
       font-size: 1rem;
-      line-height: 1rem;
+      line-height: .8rem;
       width: 1rem; }
 
 .site-info {
@@ -403,7 +495,8 @@ h3 {
   text-align: center; }
 
 p {
-  color: #BABBBC; }
+  color: #797b7d;
+  font-size: 1.1rem; }
 
 a {
   text-decoration: none; }
@@ -419,6 +512,7 @@ a {
   padding: 0 25px; }
 
 .button {
+  text-transform: uppercase;
   padding: 10px 20px;
   border: 3px solid #282828;
   transition: all 0.5s ease;
@@ -436,4 +530,4 @@ a {
   .little-line.light {
     background: #fefefe; }
   .little-line.dark {
-    background: #BABBBC; }
+    background: #797b7d; }

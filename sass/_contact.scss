@@ -4,21 +4,25 @@
 	h3 {
 		color: $white;
 	}
-	.outer-wrapper {
+}
+
+.info-form-container {
+		margin-top: 50px;
 		display: flex;
 		justify-content: space-between;
-		margin-top: 50px;
-	}
 }
 
 .information {
-	color: $white;
 	width: 35%;
-	.fa {
-		width: 35px;
+	h3 {
+		text-align: left;
+		margin: 0;
 	}
-	.fa-mobile {
-		font-size: 1.8rem;
+	.email-btn {
+		text-transform: lowercase;
+		padding: 15px;
+		color: $white;
+		border: 3px solid $white;
 	}
 }
 
@@ -50,38 +54,37 @@
 }
 
 .submit-button {
-	background: $sand;
+	text-transform: uppercase;
+	background: $white;
 	padding: 15px 30px;
-	border: 3px solid $sand;
-	color: $white;
+	border: 3px solid $white;
+	color: $black;
 	transition: all 0.5s ease;
 	&:hover {
-		color: $sand;
+		color: $white;
 		background: transparent
 	}
 }
 
 .back-to-top {
-	background: $black;
 	position: absolute;
-	bottom: -24px;
+	bottom: -22px;
 	left: calc(50% - 23px);
 	text-align: center;
 	border-radius: 50%;
 	padding: 7px;
 	z-index: 10;
 	transition: all 0.5s ease;
+	background: $black;
 	color: $white;
-	// border: 3px solid transparent;
 	&:hover {
 		background: $white;
-		// border: 3px solid $black;
 		color: $black;
 	}
 	.fa-angle-up {
 		font-size: 2.5rem;
 		display: inline-block;
 		width: 2rem;
-		line-height: 2rem;
+		line-height: 1.6rem;
 	}
 }
