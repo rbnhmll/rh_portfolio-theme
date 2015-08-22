@@ -215,7 +215,11 @@ h1 {
       left: 0; }
 
 .home-container {
-  padding: 200px 0 200px 0; }
+  padding: 250px 0 250px 0;
+  background: linear-gradient(rgba(40, 40, 40, 0.8), rgba(40, 40, 40, 0.8)), url("images/long-grass.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; }
 
 .tagline {
   text-align: center;
@@ -240,6 +244,7 @@ h1 {
   background: #fefefe; }
 
 .about-container {
+  margin-top: -40px;
   padding: 100px 0;
   background: #fefefe;
   transform: skewY(-3deg); }
@@ -285,7 +290,7 @@ h1 {
 
 .tech {
   display: inline-block;
-  padding: 2px 5px;
+  padding: 3px 5px;
   margin-right: 15px;
   border-top: 1px solid #fefefe;
   border-bottom: 1px solid #fefefe; }
@@ -327,47 +332,41 @@ h1 {
       margin: 0 auto;
       text-align: center; }
 
-.blog-main {
-  background: #fefefe; }
+.skill-icons {
+  display: flex;
+  flex-wrap: wrap; }
+  .skill-icons .devicons {
+    text-align: center;
+    margin-top: 35px;
+    font-size: 10rem;
+    width: 33.33%; }
 
-.entry-header {
-  margin-top: 150px; }
+.devicons-html5 {
+  color: #D25A3B; }
 
-.blog-content {
-  background: #fefefe; }
+.devicons-css3 {
+  color: #2E76B3; }
 
-.comments {
-  background: #282828; }
+.devicons-sass {
+  color: #BE729B; }
 
-.comment-form {
-  margin-bottom: 100px; }
-  .comment-form input,
-  .comment-form textarea {
-    color: #282828;
-    padding: 5px;
-    background: #fefefe;
-    border: 3px solid #282828; }
+.devicons-javascript_badge {
+  color: #EFD65B; }
 
-.comment-form {
-  width: 100%;
-  margin: 0 auto 100px auto; }
-  .comment-form input,
-  .comment-form input {
-    width: 100%; }
-  .comment-form textarea {
-    max-width: 100%;
-    min-width: 100%;
-    margin: 25px 0; }
+.devicons-jquery {
+  color: #256CA8; }
 
-#submit {
-  background: #B8AC8D;
-  padding: 15px 30px;
-  border: 3px solid #B8AC8D;
-  color: #fefefe;
-  transition: all 0.5s ease; }
-  #submit:hover {
-    color: #B8AC8D;
-    background: transparent; }
+.devicons-wordpress {
+  color: #42A0CF; }
+
+.devicons-php {
+  color: #5A6DA3; }
+
+.devicons-git {
+  color: #E15F40; }
+
+.devicons-gulp {
+  color: #D65B57; }
 
 .contact-container {
   position: relative;
@@ -474,7 +473,11 @@ h1 {
       width: 1rem; }
 
 .site-info {
-  text-align: center; }
+  text-align: center;
+  text-transform: uppercase; }
+  .site-info p {
+    font-size: .6rem;
+    letter-spacing: 2px; }
 
 html {
   font-size: 16px;

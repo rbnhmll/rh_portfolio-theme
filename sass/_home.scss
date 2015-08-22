@@ -1,5 +1,10 @@
 .home-container {
-	padding: 200px 0 200px 0;
+	padding: 250px 0 250px 0;
+	background: linear-gradient(rgba($black, 0.8), rgba($black, 0.8)), url('images/long-grass.jpg');
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+
 }
 
 .tagline {

@@ -36,4 +36,9 @@
 
 .site-info {
 	text-align: center;
+	text-transform: uppercase;
+	p {
+		font-size: .6rem;
+		letter-spacing: 2px;
+	}
 }

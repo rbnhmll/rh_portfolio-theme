@@ -112,22 +112,24 @@ get_header(); ?>
 
 
 <!-- BLOG SECTION -->
-	<section class="blog-container" id="blog">
+	<section class="blog-container" id="tools">
 		<div class="inner-wrapper">
-			<h3>Technologies</h3>
-			<ul>
-				<li>HTML5</li>
-				<li>CSS3</li>
-				<li>Javascript</li>
-				<li>jQuery</li>
-				<li>Wordpress</li>
-				<li>PHP</li>
-				<li>Git</li>
-				<li>Gulp</li>
-				<li>Sass</li>
-				<li>CommandLine</li>
-				<li>Mapbox</li>
-			</ul>
+		<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+				<h3><?php the_field('blog_section_title'); ?></h3>
+				<div class="little-line dark"></div>
+				<p><?php the_field('blog_description'); ?></p>
+			<?php endwhile; ?>
+			<div class="skill-icons">
+				<span class="devicons devicons-html5" title="HTML5"></span>
+				<span class="devicons devicons-css3" title="CSS3"></span>
+				<span class="devicons devicons-sass" title="SASS"></span>
+				<span class="devicons devicons-javascript_badge" title="Javascript"></span>
+				<span class="devicons devicons-jquery" title="jQuery"></span>
+				<span class="devicons devicons-wordpress" title="Wordpress"></span>
+				<span class="devicons devicons-php" title="PHP"></span>
+				<span class="devicons devicons-git" title="Git"></span>
+				<span class="devicons devicons-gulp" title="Gulp"></span>
+			</div> <!-- /.skill-icons -->
 		</div> <!-- /.inner-wrapper -->
 	</section> <!-- /.blog-container -->
 
