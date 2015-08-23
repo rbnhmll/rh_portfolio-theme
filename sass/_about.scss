@@ -13,12 +13,14 @@
 
 .about-content {
 	display: flex;
+	justify-content: space-between;
 	align-items: center;
 	margin: 35px 0;
 	@media all and (max-width: 900px) {
 		flex-direction: column;
 	}
 	p {
+		width: 100%;
 		@media all and (max-width: 900px) {
 			padding: 0 50px;
 		}
@@ -28,8 +30,14 @@
 	}
 }
 
+.about-text {
+	width: 75%;
+	@media all and (max-width: 900px) {
+		width: 100%;
+	}
+}
+
 .headshot {
-	margin-right: 5%;
 	@media all and (max-width: 900px) {
 		margin-right: 0;
 		margin-bottom: 25px;
@@ -44,6 +52,5 @@
 }
 
 .cv {
-	display: inline-block;
 	margin: 0 auto;
 }
