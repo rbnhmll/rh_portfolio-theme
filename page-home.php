@@ -20,13 +20,13 @@
 get_header(); ?>
 
 <!-- HOME SECTION -->
-	<section class="home-container">
+	<section class="home-container" data-stellar-background-ratio="1.5">
 		<div class="inner-wrapper">
 			<div class="tagline">
-				<div class="wide-line"></div>
-				<h2 class="dev-name"><?php bloginfo( 'name' ); ?></h2>
-				<h3 class="site-description"><?php bloginfo( 'description' ); ?></h3>
-				<div class="wide-line"></div>
+				<div class="wide-line animated fadeInLeftBig"></div>
+				<h2 class="dev-name animated fadeIn"><?php bloginfo( 'name' ); ?></h2>
+				<h3 class="site-description animated fadeIn"><?php bloginfo( 'description' ); ?></h3>
+				<div class="wide-line animated fadeInRightBig"></div>
 			</div> <!-- /.tagline -->
 		</div> <!-- /.inner-wrapper -->
 	</section> <!-- /.home-container -->
@@ -82,7 +82,7 @@ get_header(); ?>
 										
 										<?php //$postID = get_the_ID(); ?>
 										<!--<div class="tech-tags">--><?php //the_terms( $postID,'technology', '', ' // ', '' ); ?>
-										<!-- </div> --> <!-- /.tech-tags -->
+										<!-- </div> --> <!-- /.tech-tag			font-weight: 300;s -->
 
 
 										<?php $taxonomyItems = get_the_terms($post->ID, 'technology', '', ',', '');
@@ -111,7 +111,7 @@ get_header(); ?>
 	</section> <!-- /.portfolio-container -->
 
 
-<!-- BLOG SECTION -->
+<!-- TOOLS SECTION -->
 	<section class="blog-container" id="tools">
 		<div class="inner-wrapper">
 		<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
@@ -126,8 +126,8 @@ get_header(); ?>
 				<span class="devicons devicons-javascript_badge" title="Javascript"></span>
 				<span class="devicons devicons-jquery" title="jQuery"></span>
 				<span class="devicons devicons-wordpress" title="Wordpress"></span>
-				<span class="devicons devicons-php" title="PHP"></span>
 				<span class="devicons devicons-git" title="Git"></span>
+				<span class="devicons devicons-github_badge" title="Github"></span>
 				<span class="devicons devicons-gulp" title="Gulp"></span>
 			</div> <!-- /.skill-icons -->
 		</div> <!-- /.inner-wrapper -->
@@ -135,7 +135,7 @@ get_header(); ?>
 
 
 <!-- CONTACT SECTION -->
-	<section class="contact-container" id="contact">
+	<section class="contact-container" id="contact" data-stellar-background-ratio="1.5">
 		<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 			<div class="inner-wrapper">
 				<h3><?php the_field('contact_section_title'); ?></h3>
@@ -143,14 +143,19 @@ get_header(); ?>
 				<p><?php the_field('contact_description'); ?></p>
 				<div class="info-form-container">
 					<div class="information">
-						<h3>Let's work together</h3>
+						<h4>Let's work together</h4>
+						<div class="contact-box">
+							<a href="http://twitter.com/<?php the_field('twitter'); ?>" class="social-button"><i class="fa fa-twitter"></i></a>
+							<a href="http://github.com/<?php the_field('github'); ?>" class="social-button"><i class="fa fa-github"></i></a>
+							<a href="<?php the_field('linkedin'); ?>" class="social-button"><i class="fa fa-linkedin"></i></a>
+						</div> <!-- /.contact-box -->
 						<a href="mailto:hi@robinhamill.ca" class="button email-btn">hi@robinhamill.ca</a>
 					</div> <!-- /.information -->
 					
 					<form action="http://formspree.io/hi@robinhamill.ca" method="POST" class="contact-form">
 						<input type="text" class="name-input" name="name" placeholder="Name">
 						<input type="email" class="email-input" name="_replyto" placeholder="E-Mail">
-						<textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+						<textarea name="message" cols="30" rows="5" placeholder="Message"></textarea>
 						<input type="text" name="_gotcha" style="display:none" />
 						<input type="submit" value="Send Message" class="submit-button">
 					</form>
@@ -160,5 +165,4 @@ get_header(); ?>
 		<a href="#top" class="back-to-top"><i class="fa fa-angle-up"></i></a>
 	</section> <!-- /.contact-container -->
 
-<?php //get_sidebar(); ?>
 <?php get_footer(); ?>
