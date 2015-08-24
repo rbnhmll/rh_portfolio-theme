@@ -1,4 +1,4 @@
-/*!
+  /*!
  * jQuery Smooth Scroll - v1.5.5 - 2015-02-19
  * https://github.com/kswedberg/jquery-smooth-scroll
  * Copyright (c) 2015 Karl Swedberg

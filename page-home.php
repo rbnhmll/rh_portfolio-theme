@@ -135,7 +135,7 @@ get_header(); ?>
 
 
 <!-- CONTACT SECTION -->
-	<section class="contact-container" id="contact" data-stellar-background-ratio="1.5">
+	<section class="contact-container" id="contact" data-stellar-background-ratio="0.5">
 		<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 			<div class="inner-wrapper">
 				<h3><?php the_field('contact_section_title'); ?></h3>

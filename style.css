@@ -277,11 +277,10 @@ h1 {
 
 .home-container {
   padding: 250px 0 250px 0;
-  background: -webkit-linear-gradient(rgba(40, 40, 40, 0.7), rgba(40, 40, 40, 0.7)), url("images/hot-springs.jpg");
-  background: linear-gradient(rgba(40, 40, 40, 0.7), rgba(40, 40, 40, 0.7)), url("images/hot-springs.jpg");
-  background-size: cover;
+  background-image: -webkit-linear-gradient(rgba(40, 40, 40, 0.7), rgba(40, 40, 40, 0.7)), url("images/hot-springs.jpg");
+  background-image: linear-gradient(rgba(40, 40, 40, 0.7), rgba(40, 40, 40, 0.7)), url("images/hot-springs.jpg");
   background-position: top;
-  background-attachment: fixed; }
+  overflow: hidden; }
   @media all and (max-width: 420px) {
     .home-container {
       padding: 200px 0 200px 0; } }
@@ -371,7 +370,8 @@ h1 {
         padding: 0 50px; } }
     @media all and (max-width: 700px) {
       .about-content p {
-        text-align: center; } }
+        text-align: center;
+        padding: 0; } }
 
 .about-text {
   width: 75%; }
