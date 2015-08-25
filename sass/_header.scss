@@ -19,6 +19,7 @@
 		margin: 5px 0;
 	}
 	@media all and (max-width: 574px) {
+		flex-direction: column;
 		justify-content: center;
 	}
 	.main-navigation {
@@ -28,6 +29,9 @@
 		@media all and (max-width: 700px) {
 			font-size: .8rem;
 		}
+		@media all and (max-width: 574px) {
+			justify-content: space-around;
+	}
 	}
 }
 
@@ -108,7 +112,7 @@ h1 {
 				margin: 0;
 			}
 			@media all and (max-width: 410px) {
-				font-size: 0.6rem;
+				font-size: 0.7rem;
 			}
 			&:after {
 				position: absolute;
@@ -120,16 +124,10 @@ h1 {
 			  background: $white;
 			  transition: left .5s ease;
 			}
-			&:hover:after {
+			&:hover:after,
+			&:focus:after {
 				left: 0;
 			}
 		}
 	}
 }
-
-.active {
-	&:after {
-	left: 0;
-	}
-}
-

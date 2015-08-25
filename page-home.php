@@ -38,15 +38,19 @@ get_header(); ?>
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 				<h3><?php the_field('about_section_title'); ?></h3>
 				<div class="little-line dark"></div>
+				
 				<div class="about-content">
-					<div class="headshot">
-						<img src="<?php the_field('photo'); ?>" alt="">
-					</div> <!-- /.headshot -->
-					<div class="about-text">
-						<?php the_field('about_description'); ?>
-					</div> <!-- /.about-text -->
+					<div class="headshot-text-container">
+						<div class="headshot">
+							<img src="<?php the_field('photo'); ?>" alt="">
+						</div> <!-- /.headshot -->
+						<div class="about-text">
+							<?php the_field('about_description'); ?>
+						</div> <!-- /.about-text -->
+					</div> <!-- /.headshot-text-container -->
+					<a href="" class="cv button">View CV</a>
 				</div> <!-- /.about-content -->
-				<a href="" class="cv button">View CV</a>
+			
 			<?php endwhile; ?>
 		</div> <!-- /.inner-wrapper -->
 	</section> <!-- /.about-container -->
@@ -93,7 +97,7 @@ get_header(); ?>
 										   };
 										  ?>
 
-										<?php the_excerpt(); ?>
+										<?php the_content(); ?>
 										<a href="<?php the_field('live_link'); ?>" class="viewLive button" target="_blank">View Live</a>
 									</div> <!-- /.portfolio-text -->
 								</div> <!-- /.portfolio-item -->
@@ -143,23 +147,29 @@ get_header(); ?>
 				<p><?php the_field('contact_description'); ?></p>
 				<div class="info-form-container">
 					<div class="information">
-						<h4>Let's work together</h4>
+						<h4>Let's work together!</h4>
 						<div class="contact-box">
 							<a href="http://twitter.com/<?php the_field('twitter'); ?>" class="social-button"><i class="fa fa-twitter"></i></a>
-							<a href="http://github.com/<?php the_field('github'); ?>" class="social-button"><i class="fa fa-github"></i></a>
 							<a href="<?php the_field('linkedin'); ?>" class="social-button"><i class="fa fa-linkedin"></i></a>
+							<a href="http://github.com/<?php the_field('github'); ?>" class="social-button"><i class="fa fa-github"></i></a>
+							<a href="http://codepen.io/<?php the_field('codepen'); ?>" class="social-button"><i class="fa fa-codepen"></i></a>
 						</div> <!-- /.contact-box -->
 						<a href="mailto:hi@robinhamill.ca" class="button email-btn">hi@robinhamill.ca</a>
 					</div> <!-- /.information -->
 					
 					<form action="http://formspree.io/hi@robinhamill.ca" method="POST" class="contact-form">
-						<input type="text" class="name-input" name="name" placeholder="Name">
-						<input type="email" class="email-input" name="_replyto" placeholder="E-Mail">
+						<div class="name-email-container">
+							<input type="text" class="name-input" name="name" placeholder="Name">
+							<input type="email" class="email-input" name="_replyto" placeholder="E-Mail">
+						</div> <!-- /.name-email-container -->
 						<textarea name="message" cols="30" rows="5" placeholder="Message"></textarea>
 						<input type="text" name="_gotcha" style="display:none" />
-						<input type="submit" value="Send Message" class="submit-button">
-					</form>
+						<div class="submit-container">
+							<input type="submit" value="Send Message" class="submit-button">
+						</div> <!-- /.submit-container -->
+					</form> <!-- /.contact-form -->
 				</div> <!-- /.info-form-container -->
+
 			</div> <!-- /.inner-wrapper -->
 			<?php endwhile; ?>
 		<a href="#top" class="back-to-top"><i class="fa fa-angle-up"></i></a>

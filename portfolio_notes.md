@@ -10,8 +10,9 @@
 <!-- match contact width to inner-wrapper -->
 <!-- add background image -->
 <!-- reduce the word count of about section. -->
-make nav buttons show what section you are in.
+<!-- make nav buttons show what section you are in. -->
 <!-- Left of form - "Let's work together" ie. -->
+Add to about section - learning, teaching, LLC
 
 jQuery magic stuffs
 <!-- lines move in on load -->

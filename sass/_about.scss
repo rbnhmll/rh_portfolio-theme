@@ -13,26 +13,33 @@
 
 .about-content {
 	display: flex;
-	justify-content: space-between;
+	flex-direction: column;
 	align-items: center;
 	margin: 35px 0;
-	@media all and (max-width: 900px) {
-		flex-direction: column;
-	}
+	flex-wrap: wrap;
 	p {
 		width: 100%;
 		@media all and (max-width: 900px) {
 			padding: 0 50px;
 		}
 		@media all and (max-width: 700px) {
-			text-align: center;
 			padding: 0;
 		}
 	}
 }
 
+.headshot-text-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 35px;
+	@media all and (max-width: 900px) {
+		flex-direction: column;
+	}
+}
+
 .about-text {
-	width: 75%;
+	width: 74%;
 	@media all and (max-width: 900px) {
 		width: 100%;
 	}
@@ -44,6 +51,7 @@
 		margin-bottom: 25px;
 	}
 	img {
+		display: block;
 		width: 200px;
 		border-radius: 50%;
 		@media all and (max-width: 700px) {
@@ -53,5 +61,6 @@
 }
 
 .cv {
+	display: inline-block;
 	margin: 0 auto;
 }

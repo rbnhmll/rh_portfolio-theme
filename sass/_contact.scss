@@ -87,6 +87,7 @@
 .contact-form {
 	width: calc(50% + 87px);
 	display: flex;
+	// flex-direction: column;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	@media all and (max-width: 800px) {
@@ -100,6 +101,19 @@
 		max-width: 100%;
 		min-width: 100%;
 		margin: 25px 0;
+	}
+}
+
+.name-email-container {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.submit-container {
+	width: 100%;
+	@media all and (max-width: 800px) {
+		display: flex;
 	}
 }
 

@@ -34,7 +34,7 @@
 			<div class="nav-logo-container">
 				<div class="site-branding">
 						<h1 class="site-title">
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+							<a href="#top" rel="home"><?php bloginfo( 'name' ); ?></a>
 							<div class="mini-box mini-topleft animated fadeInLeftBig"></div>
 							<div class="mini-box mini-topright animated fadeInLeftBig"></div>
 							<div class="mini-box mini-bottomleft animated fadeInLeftBig"></div>
