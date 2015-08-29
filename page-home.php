@@ -48,7 +48,7 @@ get_header(); ?>
 							<?php the_field('about_description'); ?>
 						</div> <!-- /.about-text -->
 					</div> <!-- /.headshot-text-container -->
-					<a href="" class="cv button">View CV</a>
+					<a href="http://robinhamill.ca/robinHamill_cv.pdf" class="cv button">View CV</a>
 				</div> <!-- /.about-content -->
 			
 			<?php endwhile; ?>

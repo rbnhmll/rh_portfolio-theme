@@ -4,10 +4,10 @@
 	background: $white;
 	transform: skewY(-3deg);
 	.inner-wrapper {
-			transform: skewY(3deg);
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
+		transform: skewY(3deg);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 	}
 }
 
@@ -19,6 +19,13 @@
 	flex-wrap: wrap;
 	p {
 		width: 100%;
+		a {
+			color: $darkgrey;
+			font-weight: 300;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
 		@media all and (max-width: 900px) {
 			padding: 0 50px;
 		}

@@ -18,4 +18,4 @@ jQuery magic stuffs
 <!-- lines move in on load -->
 fade in on scroll?
 <!-- Animate.css? -->
-Fix Safari problems
+<!-- Fix Safari problems -->
