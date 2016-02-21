@@ -73,7 +73,7 @@ svg:not(:root) {
 fieldset {
   border: 1px solid silver;
   margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em; }
+  padding: .35em .625em .75em; }
 
 button, input, select, textarea {
   font-family: inherit;
@@ -83,7 +83,8 @@ button, input, select, textarea {
 button, input {
   line-height: normal; }
 
-button, html input[type=button], input[type=reset], input[type=submit] {
+button, html input[type=button],
+input[type=reset], input[type=submit] {
   -webkit-appearance: button;
   cursor: pointer; }
 
@@ -134,7 +135,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   width: 100%;
   background: rgba(40, 40, 40, 0.5);
   -webkit-transition: all 0.5s ease;
-          transition: all 0.5s ease; }
+  transition: all 0.5s ease; }
   .site-header:hover {
     background: rgba(40, 40, 40, 0.9); }
 
@@ -277,10 +278,9 @@ h1 {
       width: 100%;
       height: 3px;
       background: #fefefe;
-      -webkit-transition: left 0.5s ease;
-              transition: left 0.5s ease; }
-    .menu .menu-item a:hover:after,
-    .menu .menu-item a:focus:after {
+      -webkit-transition: left .5s ease;
+      transition: left .5s ease; }
+    .menu .menu-item a:hover:after, .menu .menu-item a:focus:after {
       left: 0; }
 
 .home-container {
@@ -331,11 +331,9 @@ h1 {
   padding: 100px 0;
   background: #fefefe;
   -webkit-transform: skewY(-3deg);
-      -ms-transform: skewY(-3deg);
           transform: skewY(-3deg); }
   .about-container .inner-wrapper {
     -webkit-transform: skewY(3deg);
-        -ms-transform: skewY(3deg);
             transform: skewY(3deg);
     display: -webkit-box;
     display: -webkit-flex;
@@ -492,26 +490,22 @@ h1 {
   color: #fefefe;
   border: 3px solid #fefefe;
   text-decoration: none; }
-  .portfolio-text .button.viewLive:hover,
-  .portfolio-text .button.viewLive:focus {
+  .portfolio-text .button.viewLive:hover, .portfolio-text .button.viewLive:focus {
     background: #fefefe;
     color: #282828; }
   @media all and (max-width: 900px) {
     .portfolio-text .button.viewLive {
       left: 50%;
       -webkit-transform: translateX(-50%);
-          -ms-transform: translateX(-50%);
               transform: translateX(-50%); } }
 
 .blog-container {
   padding: 100px 0;
   background: #fefefe;
   -webkit-transform: skewY(-3deg);
-      -ms-transform: skewY(-3deg);
           transform: skewY(-3deg); }
   .blog-container .inner-wrapper {
     -webkit-transform: skewY(3deg);
-        -ms-transform: skewY(3deg);
             transform: skewY(3deg); }
     .blog-container .inner-wrapper p {
       text-align: center; }
@@ -585,6 +579,12 @@ h1 {
 
 .devicons-wordpress {
   color: #42A0CF; }
+
+.devicons-ruby {
+  color: #9E1408; }
+
+.devicons-ruby_on_rails {
+  color: #B32524; }
 
 .devicons-github_badge {
   color: #122635; }
@@ -677,10 +677,9 @@ h1 {
     .information .contact-box .fa {
       font-size: 2rem;
       color: #fefefe;
-      -webkit-transition: all 0.5s ease;
-              transition: all 0.5s ease; }
-      .information .contact-box .fa:hover,
-      .information .contact-box .fa:focus {
+      -webkit-transition: all .5s ease;
+      transition: all .5s ease; }
+      .information .contact-box .fa:hover, .information .contact-box .fa:focus {
         color: #D9DADB; }
   .information .email-btn {
     width: 100%;
@@ -691,8 +690,7 @@ h1 {
     padding: 12px 30px;
     color: #fefefe;
     border: 3px solid #fefefe; }
-    .information .email-btn:hover,
-    .information .email-btn:focus {
+    .information .email-btn:hover, .information .email-btn:focus {
       background: #fefefe;
       color: #282828; }
 
@@ -757,12 +755,11 @@ h1 {
   border: 3px solid #fefefe;
   color: #282828;
   -webkit-transition: all 0.5s ease;
-          transition: all 0.5s ease; }
+  transition: all 0.5s ease; }
   @media all and (max-width: 800px) {
     .submit-button {
       margin: 0 auto; } }
-  .submit-button:hover,
-  .submit-button:focus {
+  .submit-button:hover, .submit-button:focus {
     color: #fefefe;
     background: transparent; }
 
@@ -775,11 +772,10 @@ h1 {
   padding: 7px;
   z-index: 10;
   -webkit-transition: all 0.5s ease;
-          transition: all 0.5s ease;
+  transition: all 0.5s ease;
   background: #282828;
   color: #fefefe; }
-  .back-to-top:hover,
-  .back-to-top:focus {
+  .back-to-top:hover, .back-to-top:focus {
     background: #fefefe;
     color: #282828; }
   .back-to-top .fa-angle-up {
@@ -792,13 +788,11 @@ h1 {
   padding: 75px 0 0 0;
   background: #fefefe;
   -webkit-transform: skewY(-3deg);
-      -ms-transform: skewY(-3deg);
           transform: skewY(-3deg);
   margin-bottom: -20px;
   box-shadow: 0 100px 0 #fefefe; }
   .site-footer .inner-wrapper {
     -webkit-transform: skewY(3deg);
-        -ms-transform: skewY(3deg);
             transform: skewY(3deg); }
 
 .site-info {
@@ -856,7 +850,7 @@ a {
   padding: 10px 20px;
   border: 3px solid #282828;
   -webkit-transition: all 0.5s ease;
-          transition: all 0.5s ease;
+  transition: all 0.5s ease;
   color: #282828; }
   .button:hover {
     background: #282828;

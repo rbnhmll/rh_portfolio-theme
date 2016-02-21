@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/rbnhmll/rh_portfolio-theme/issues"
   },
+  "dependencies": {
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-concat": "*",
+    "gulp-sass": "*",
+    "node-sass": "*"
+  },
   "homepage": "https://github.com/rbnhmll/rh_portfolio-theme#readme"
 }

@@ -129,10 +129,10 @@ get_header(); ?>
 				<span class="devicons devicons-sass" title="SASS"></span>
 				<span class="devicons devicons-javascript_badge" title="Javascript"></span>
 				<span class="devicons devicons-jquery" title="jQuery"></span>
-				<span class="devicons devicons-wordpress" title="Wordpress"></span>
-				<span class="devicons devicons-git" title="Git"></span>
-				<span class="devicons devicons-github_badge" title="Github"></span>
 				<span class="devicons devicons-gulp" title="Gulp"></span>
+				<span class="devicons devicons-ruby" title="Ruby"></span>
+				<span class="devicons devicons-ruby_on_rails" title="Ruby on Rails"></span>
+				<span class="devicons devicons-git" title="Git"></span>
 			</div> <!-- /.skill-icons -->
 		</div> <!-- /.inner-wrapper -->
 	</section> <!-- /.blog-container -->
